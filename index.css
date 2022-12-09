@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-font: "Righteous", cursive;
+  --secondary-font: "Poppins", sans-serif;
+  font-size: 16px;
+}
+/******************general styling****************/
+h1 {
+  font-size: 5.653rem;
+}
+h2 {
+  font-size: 3.998rem;
+  font-family: var(--primary-font);
+  color: #ff47c3;
+}
+h3 {
+  font-size: 2.827rem;
+  font-family: var(--primary-font);
+  color: white;
+}
+h4,
+p {
+  font-size: 1.999rem;
+  /* if too big, use 1.414rem */
+  font-family: var(--secondary-font);
+  color: white;
+}
+/*********************everything navigation styling goes in here**********************/
+/* //////////////////////////Navigation bar///////////////////////////////// */
+body {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navigation {
+  background: transparent;
+  background-color: rgb(108, 193, 246, 0.9);
+  position: fixed;
+  top: 0;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 2px 2px 10px #6cc1f6;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+}
+
+.logoText {
+  margin: 0;
+  text-shadow: 2px 2px #e62323;
+}
+/* ///////////////////////////////BUY ticket Button////////////////////////////////// */
+.buyTicketButton {
+  background-color: var(--dark-color1);
+  border: 0;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 1px 1px 10px black;
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  margin-left: 4rem;
+  text-shadow: 1px 1px #444042;
+  color: white;
+}
+
+@media screen and (min-width: 601px) {
+  .navigation {
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 1rem;
+  }
+  nav {
+    display: flex;
+    justify-content: end;
+  }
+  nav ul {
+    padding: 0;
+  }
+  nav li {
+    margin-top: 1rem;
+  }
+  nav li a {
+    font-size: 15px;
+  }
+  .buy-ticket-button {
+    font-size: 1rem;
+    margin-left: 0px;
+  }
+
+  .logoText {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* ///////////////////////mobile view///////////////////////////// */
+@media (max-width: 600px) {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+  .buyTicketButton {
+    display: none;
+  }
+  .logoText {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  nav li a {
+    font-size: 20px;
+  }
+  .buyTicketButton {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+  .logoText {
+    font-size: 3.5rem;
+  }
+}
+nav li a {
+  text-decoration: none;
+  color: var(--dark-text-color);
+  padding: 14px 16px;
+  text-shadow: 1px 1px #3f3c3c;
+  font-family: var(--secondary-font);
+}
+
+/*********************everything footer styling goes in here*********************/
+#socials_logo {
+  width: 20%;
+}
+.footer_content {
+  padding: 2.5rem;
+  line-height: 1.7rem;
+  text-align: center;
+}
+.headline_text {
+  font-size: 1.999rem;
+}
+.footer_text {
+  font-size: 1.414rem;
+}
+.contact,
+.email,
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 850px) {
+  .footer_content {
+    padding: 2rem;
+    margin: 0 2rem 0 2rem;
+    line-height: 1.5rem;
+  }
+  .footer_text {
+    font-size: 1.414rem;
+  }
+  .footer_information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .contact,
+  .email,
+  .socials {
+    padding-right: 4rem;
+  }
+  .footer_headlines {
+    display: flex;
+    padding: 2rem;
+    gap: 5rem;
+    align-items: center;
+  }
+  #socials_logo {
+    width: 40%;
+  }
+}
