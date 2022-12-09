@@ -8,6 +8,11 @@ html {
   --primary-font: "Righteous", sans-serif;
   --secondary-font: "Poppins", sans-serif;
   font-size: 16px;
+
+  ---blue-backgroundcolor: rgb(108, 193, 246, 0.9);
+  --blue-backgroundcolor2: rgb(112, 215, 255);
+
+  --pink-fontcolor: rgb(255, 71, 195);
 }
 /******************general styling****************/
 h1 {
@@ -16,7 +21,7 @@ h1 {
 h2 {
   font-size: 3.998rem;
   font-family: var(--primary-font);
-  color: #ff47c3;
+  color: var(--pink-fontcolor);
 }
 h3 {
   font-size: 2.827rem;
@@ -31,9 +36,10 @@ p {
   color: white;
 }
 /*********************everything navigation styling goes in here**********************/
-/* //////////////////////////Navigation bar///////////////////////////////// */
+
 body {
   margin: 0;
+  background-color: var(---blue-backgroundcolor);
 }
 img {
   max-width: 100%;
@@ -61,7 +67,7 @@ nav li {
   margin: 0;
   text-shadow: 2px 2px #e62323;
 }
-/* ///////////////////////////////BUY ticket Button////////////////////////////////// */
+/* BUY ticket Button */
 .buyTicketButton {
   background-color: var(--dark-color1);
   border: 0;
@@ -105,7 +111,7 @@ nav li {
   }
 }
 
-/* ///////////////////////mobile view///////////////////////////// */
+/*mobile view*/
 @media (max-width: 600px) {
   .navigation {
     display: flex;
@@ -144,7 +150,11 @@ nav li a {
   text-shadow: 1px 1px #3f3c3c;
   font-family: var(--secondary-font);
 }
-
+/*********************everything schedule styling goes in here*********************/
+.schedule {
+  padding: 2rem;
+  /* background-color: var(--pink-fontcolor); */
+}
 /*********************everything footer styling goes in here*********************/
 #socials_logo {
   width: 20%;
@@ -153,6 +163,7 @@ nav li a {
   padding: 2.5rem;
   line-height: 1.7rem;
   text-align: center;
+  background-color: var(--blue-backgroundcolor2);
 }
 .headline_text {
   font-size: 1.999rem;
@@ -171,7 +182,7 @@ nav li a {
 @media screen and (min-width: 850px) {
   .footer_content {
     padding: 2rem;
-    margin: 0 2rem 0 2rem;
+    /* margin: 0 2rem 0 2rem; */
     line-height: 1.5rem;
   }
   .footer_text {
