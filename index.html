@@ -30,15 +30,36 @@
         </nav>
       </div>
 
-      <div class="schedule">
+      <section>
+        <!-- filtering buttons -->
+        <button data-filter="Midgard" data-action="filter" data-type="midgard">Midgard</button>
+        <button data-filter="Vanaheim" data-action="filter" data-type="vanaheim">Vanaheim</button>
+        <button data-filter="Jotunheim" data-action="filter" data-type="jotunheim">Jotunheim</button>
+      </section>
+
+      <section class="schedule">
         <h1 class="schedule_h1">FooFest schedule</h1>
         <p>here the schedule section will be placed</p>
-      </div>
+      </section>
 
-      <!-- sorting/filtering -->
+      <!-- schedule list - the three stages -->
+      <template id="scheduleList">
+        <table class="">
+          <tr class="days">
+            <td data-field="Midgard"></td>
+            <td data-field="Jotunheim"></td>
+            <td data-field="Vanaheim"></td>
 
-      <!-- schedule list - here you can see the three stages -->
-
+            <!-- <td data-field="Monday"></td>
+            <td data-field="Tuesday"></td>
+            <td data-field="Wednesday"></td>
+            <td data-field="Thursday"></td>
+            <td data-field="Friday"></td>
+            <td data-field="Saturday"></td>
+            <td data-field="Sunday"></td> -->
+          </tr>
+        </table>
+      </template>
       <!-- days of the week table - here you should see the three stages categories and the timetable inside it (all the artists) -->
     </main>
 
