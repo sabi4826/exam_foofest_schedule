@@ -15,7 +15,7 @@
   <body>
     <main>
       <div class="navigation">
-        <h2 class="logoText">FOOFEST</h2>
+        <h2 class="logoText">FooFest</h2>
         <nav>
           <ul>
             <li>
@@ -30,36 +30,38 @@
         </nav>
       </div>
 
-      <section>
-        <!-- filtering buttons -->
-        <button data-filter="Midgard" data-action="filter" data-type="midgard">Midgard</button>
-        <button data-filter="Vanaheim" data-action="filter" data-type="vanaheim">Vanaheim</button>
-        <button data-filter="Jotunheim" data-action="filter" data-type="jotunheim">Jotunheim</button>
-      </section>
-
-      <section class="schedule">
+      <section id="scheduleSection">
         <h1 class="schedule_h1">FooFest schedule</h1>
-        <p>here the schedule section will be placed</p>
-      </section>
 
-      <!-- schedule list - the three stages -->
-      <template id="scheduleList">
-        <table class="">
-          <tr class="days">
-            <td data-field="Midgard"></td>
-            <td data-field="Jotunheim"></td>
-            <td data-field="Vanaheim"></td>
+        <div class="buttons">
+          <!-- filtering buttons -->
+          <button data-filter="Midgard" data-action="filter" data-type="midgard" class="filteringButtons">Midgard</button>
+          <button data-filter="Vanaheim" data-action="filter" data-type="vanaheim" class="filteringButtons">Vanaheim</button>
+          <button data-filter="Jotunheim" data-action="filter" data-type="jotunheim" class="filteringButtons">Jotunheim</button>
+        </div>
 
-            <!-- <td data-field="Monday"></td>
+        <section id="scheduleList"></section>
+
+        <!-- schedule template - the three stages -->
+        <template id="scheduleTemplate">
+          <table class="scheduleListTable">
+            <tr class="days">
+              <td data-field="Midgard"></td>
+              <td data-field="Jotunheim"></td>
+              <td data-field="Vanaheim"></td>
+
+              <!-- <td data-field="Monday"></td>
             <td data-field="Tuesday"></td>
             <td data-field="Wednesday"></td>
             <td data-field="Thursday"></td>
             <td data-field="Friday"></td>
             <td data-field="Saturday"></td>
             <td data-field="Sunday"></td> -->
-          </tr>
-        </table>
-      </template>
+            </tr>
+          </table>
+        </template>
+      </section>
+
       <!-- days of the week table - here you should see the three stages categories and the timetable inside it (all the artists) -->
     </main>
 
