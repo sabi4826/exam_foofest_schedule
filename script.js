@@ -14,7 +14,6 @@ const settings = {
   filterValue: "",
 };
 const scheduleURL = "http://localhost:8080/schedule";
-// const bandsURL = "http://localhost:8080/bands";
 
 //==================starting off the page==================
 function init() {

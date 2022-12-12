@@ -199,6 +199,15 @@ nav li a {
   text-align: center;
   color: white;
 }
+/* table */
+#scheduleList {
+  border: 1px solid black;
+  padding: 2rem;
+}
+/* .scheduleListTable {
+  border: 1px solid black;
+  padding: 2rem;
+} */
 /*********************everything footer styling goes in here*********************/
 .logos {
   width: 10%;
