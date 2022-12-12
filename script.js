@@ -13,7 +13,7 @@ const settings = {
   displayedArray: [],
   filterValue: "",
 };
-// const scheduleURL = "http://localhost:8080/schedule";
+const scheduleURL = "http://localhost:8080/schedule";
 // const bandsURL = "http://localhost:8080/bands";
 
 //==================starting off the page==================
@@ -26,30 +26,51 @@ function registerCat() {
 }
 
 async function loadSchedule() {
-  //   const response = await fetch(scheduleURL);
-  //   const scheduleData = await response.json();
-  //   displayList();
-
-  fetch("http://localhost:8080/schedule")
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
-  displayList();
+  // fetch("http://localhost:8080/schedule")
+  //   .then((response) => response.json())
+  //   .then((response) => console.log(response))
+  //   .catch((err) => console.error(err));
+  // displayList();
+  const response = await fetch(scheduleURL);
+  const scheduleList = await response.json();
+  // console.log(scheduleList.Midgard);
+  displayList(scheduleList);
 }
 //==================display the list==================
-function displayList() {
+function displayList(scheduleList) {
+  // console.log(scheduleList);
   document.querySelector("#scheduleList").innerHTML = "";
-  settings.displayedArray.forEach(displaySchedule);
-  console.log("hi", displaySchedule);
+  // console.table(scheduleList);
+  // const newArr = Object.entries(scheduleList);
+  // newArr.forEach(displaySchedule);
+  for (const newArr of Object.entries(scheduleList)) {
+    // console.log(newArr);
+    displaySchedule(newArr);
+  }
+  // console.log(newArr);
+
+  // settings.displayedArray.forEach(displaySchedule);
+  // console.log("hi", displaySchedule);
 }
 //==================display the stages(?) on the list==================
 
-function displaySchedule(stages) {
-  const clone = document.querySelector("#scheduleList").textContent.cloneNode(true);
+function displaySchedule(newArr) {
+  // const days = Object.entries(newArr);
+  console.log(newArr);
+  const mon = newArr[1].mon;
+  // console.table(mon);
+  // console.log(stages[1].mon);
+  mon.forEach((act) => {
+    const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
-  clone.querySelector('[data-field="Midgard"]').textContent = stages.Midgard;
-  clone.querySelector('[data-field="Jotunheim"]').textContent = stages.Jotunheim;
-  clone.querySelector('[data-field="Vanaheim"]').textContent = stages.Vanaheim;
+    clone.querySelector('[data-field="Midgard"]').textContent = act.act;
+    // clone.querySelector('[data-field="Jotunheim"]').textContent = stages.Jotunheim;
+    // clone.querySelector('[data-field="Vanaheim"]').textContent = stages.Vanaheim;
+
+    const parent = document.querySelector("#scheduleList");
+
+    parent.appendChild(clone);
+  });
 }
 //==================filtering stages==================
 
