@@ -199,6 +199,10 @@ nav li a {
   text-align: center;
   color: white;
 }
+table,
+tr {
+  border: 1px solid black;
+}
 /*********************everything footer styling goes in here*********************/
 .logos {
   width: 10%;
