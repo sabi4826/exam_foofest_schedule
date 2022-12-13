@@ -199,10 +199,16 @@ nav li a {
   text-align: center;
   color: white;
 }
-table,
-tr {
+#scheduleList {
+  margin: 2rem;
   border: 1px solid black;
+  padding: 1rem;
 }
+.scheduleListTable {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
 /*********************everything footer styling goes in here*********************/
 .logos {
   width: 10%;

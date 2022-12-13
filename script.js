@@ -63,87 +63,79 @@ function displaySchedule(stages) {
   const sun = stages[1].sun;
 
   mon.forEach((act) => {
-    // console.table(act);
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
-    clone.querySelector('[data-field="Midgard"]').textContent = `Monday ${act.act}`;
-    clone.querySelector('[data-field="Jotunheim"]').textContent = act.start;
-    clone.querySelector('[data-field="Vanaheim"]').textContent = act.end;
+    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
+    clone.querySelector('[data-field="Start"]').textContent = act.start;
+    clone.querySelector('[data-field="End"]').textContent = act.end;
 
     const parent = document.querySelector("#scheduleList");
 
     parent.appendChild(clone);
   });
+
   tue.forEach((act) => {
-    // console.table(act);
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
-    clone.querySelector('[data-field="Midgard"]').textContent = `Tuesday ${act.act}`;
-    clone.querySelector('[data-field="Jotunheim"]').textContent = act.start;
-    clone.querySelector('[data-field="Vanaheim"]').textContent = act.end;
-
-    // clone.querySelector('[data-field="Jotunheim"]').textContent = stages.Jotunheim;
-    // clone.querySelector('[data-field="Vanaheim"]').textContent = stages.Vanaheim;
+    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
+    clone.querySelector('[data-field="Start"]').textContent = act.start;
+    clone.querySelector('[data-field="End"]').textContent = act.end;
 
     const parent = document.querySelector("#scheduleList");
 
     parent.appendChild(clone);
   });
+
   wed.forEach((act) => {
-    // console.table(act);
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
-    clone.querySelector('[data-field="Midgard"]').textContent = `Wednesday ${act.act}`;
-    clone.querySelector('[data-field="Jotunheim"]').textContent = act.start;
-    clone.querySelector('[data-field="Vanaheim"]').textContent = act.end;
+    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
+    clone.querySelector('[data-field="Start"]').textContent = act.start;
+    clone.querySelector('[data-field="End"]').textContent = act.end;
 
     const parent = document.querySelector("#scheduleList");
 
     parent.appendChild(clone);
   });
   thu.forEach((act) => {
-    // console.table(act);
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
-    clone.querySelector('[data-field="Midgard"]').textContent = `Thursday ${act.act}`;
-    clone.querySelector('[data-field="Jotunheim"]').textContent = act.start;
-    clone.querySelector('[data-field="Vanaheim"]').textContent = act.end;
+    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
+    clone.querySelector('[data-field="Start"]').textContent = act.start;
+    clone.querySelector('[data-field="End"]').textContent = act.end;
 
     const parent = document.querySelector("#scheduleList");
 
     parent.appendChild(clone);
   });
   fri.forEach((act) => {
-    // console.table(act);
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
-    clone.querySelector('[data-field="Midgard"]').textContent = `Friday ${act.act}`;
-    clone.querySelector('[data-field="Jotunheim"]').textContent = act.start;
-    clone.querySelector('[data-field="Vanaheim"]').textContent = act.end;
+    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
+    clone.querySelector('[data-field="Start"]').textContent = act.start;
+    clone.querySelector('[data-field="End"]').textContent = act.end;
 
     const parent = document.querySelector("#scheduleList");
 
     parent.appendChild(clone);
   });
   sat.forEach((act) => {
-    // console.table(act);
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
-    clone.querySelector('[data-field="Midgard"]').textContent = `Saturday ${act.act}`;
-    clone.querySelector('[data-field="Jotunheim"]').textContent = act.start;
-    clone.querySelector('[data-field="Vanaheim"]').textContent = act.end;
+    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
+    clone.querySelector('[data-field="Start"]').textContent = act.start;
+    clone.querySelector('[data-field="End"]').textContent = act.end;
 
     const parent = document.querySelector("#scheduleList");
 
     parent.appendChild(clone);
   });
   sun.forEach((act) => {
-    // console.table(act);
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
-    clone.querySelector('[data-field="Midgard"]').textContent = `Sunday ${act.act}`;
-    clone.querySelector('[data-field="Jotunheim"]').textContent = act.start;
-    clone.querySelector('[data-field="Vanaheim"]').textContent = act.end;
+    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
+    clone.querySelector('[data-field="Start"]').textContent = act.start;
+    clone.querySelector('[data-field="End"]').textContent = act.end;
 
     const parent = document.querySelector("#scheduleList");
 
@@ -152,9 +144,9 @@ function displaySchedule(stages) {
 }
 //==================filtering stages==================
 
-function selectFilter(event) {
-  settings.filterValue = event.target.dataset.filter;
-  settings.filterType = event.target.dataset.type;
+// function selectFilter(event) {
+//   settings.filterValue = event.target.dataset.filter;
+//   settings.filterType = event.target.dataset.type;
 
-  console.log(settings.filterValue);
-}
+//   console.log(settings.filterValue);
+// }

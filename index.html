@@ -40,39 +40,37 @@
           <p data-filter="Jotunheim" data-action="filter" data-type="jotunheim" class="filteringButtons">Jotunheim</p>
         </div>
 
-        <section id="scheduleList">
-          <table class="scheduleListTable">
-            <tr class="stages">
-              <th class="day">Monday</th>
-              <td data-field="Midgard" class="Midgard"></td>
-              <td data-field="Jotunheim" class="Vanaheim"></td>
-              <td data-field="Vanaheim" class="Jotunheim"></td>
-            </tr>
-          </table>
-        </section>
+        <section id="scheduleList"></section>
 
-        <!-- schedule template - the three stages -->
         <template id="scheduleTemplate">
           <table class="scheduleListTable">
-            <tr class="stages">
-              <th>Time slots</th>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
-              <th>Saturday</th>
-              <th>Sunday</th>
+            <!-- <tr >
+              <td>Time slots</td>
 
-              <td data-field="Midgard"></td>
-              <td data-field="Jotunheim"></td>
-              <td data-field="Vanaheim"></td>
+              <td>Monday</td>
+              <td>Tuesday</td>
+              <td>Wednesday</td>
+              <td>Thursday</td>
+              <td>Friday</td>
+              <td>Saturday</td>
+              <td>Sunday</td>
+            </tr> -->
+            <tr class="stages">
+              <th>Act</th>
+              <td data-field="Acts" class="act"></td>
+
+              <th>Start</th>
+              <td data-field="Start" class="start"></td>
+
+              <th>End</th>
+              <td data-field="End" class="end"></td>
+              <!-- <td data-field="Midgard" class="midgard"></td>
+              <td data-field="Jotunheim" class="Jotunheim"></td>
+              <td data-field="Vanaheim" class="vanaheim"></td> -->
             </tr>
           </table>
         </template>
       </section>
-
-      <!-- days of the week table - here you should see the three stages categories and the timetable inside it (all the artists) -->
     </main>
 
     <footer>
