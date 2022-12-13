@@ -32,24 +32,16 @@ async function loadSchedule() {
   // displayList();
   const response = await fetch(scheduleURL);
   const scheduleList = await response.json();
-  // console.log(scheduleList.Midgard);
   displayList(scheduleList);
 }
 //==================display the list==================
 function displayList(scheduleList) {
-  // console.log(scheduleList);
   document.querySelector("#scheduleList").innerHTML = "";
-  // console.table(scheduleList);
   // const newArr = Object.entries(scheduleList);
   // newArr.forEach(displaySchedule);
   for (const stages of Object.entries(scheduleList)) {
-    // console.log(newArr);
     displaySchedule(stages);
   }
-  // console.log(newArr);
-
-  // settings.displayedArray.forEach(displaySchedule);
-  // console.log("hi", displaySchedule);
 }
 //==================display the stages(?) on the list==================
 
@@ -62,6 +54,20 @@ function displaySchedule(stages) {
   const sat = stages[1].sat;
   const sun = stages[1].sun;
 
+  // const Midgard = stages[1].Midgard;
+
+  // Midgard.forEach((act) => {
+  //   const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
+
+  //   clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
+  //   clone.querySelector('[data-field="Start"]').textContent = act.start;
+  //   clone.querySelector('[data-field="End"]').textContent = act.end;
+
+  //   const parent = document.querySelector("#scheduleList");
+
+  //   parent.appendChild(clone);
+  // });
+
   mon.forEach((act) => {
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
@@ -73,7 +79,6 @@ function displaySchedule(stages) {
 
     parent.appendChild(clone);
   });
-
   tue.forEach((act) => {
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
@@ -85,7 +90,6 @@ function displaySchedule(stages) {
 
     parent.appendChild(clone);
   });
-
   wed.forEach((act) => {
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
 
