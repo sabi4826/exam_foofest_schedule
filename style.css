@@ -200,13 +200,31 @@ nav li a {
   color: white;
 }
 #scheduleList {
+  /* margin: 2rem; */
+  /* border: 1px solid black; */
+  /* padding: 1rem; */
+  padding-top: 0;
+  margin-top: 0;
+}
+.container {
   margin: 2rem;
-  border: 1px solid black;
   padding: 1rem;
 }
 .scheduleListTable {
-  border: 1px solid black;
-  padding: 1rem;
+  border-collapse: separate;
+  width: 100%;
+}
+
+td {
+  /* border: 1px solid #dddddd; */
+  text-align: left;
+  padding: 10px;
+  width: 10%;
+  box-shadow: 1px 1px 10px rgb(255, 71, 195);
+}
+.th {
+  text-align: center;
+  font-weight: bolder;
 }
 
 /*********************everything footer styling goes in here*********************/
