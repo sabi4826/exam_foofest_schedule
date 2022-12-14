@@ -48,30 +48,23 @@
 
         <template id="scheduleTemplate">
           <table class="scheduleListTable">
-            <!-- <tr >
-              <td>Time slots</td>
-
-              <td>Monday</td>
-              <td>Tuesday</td>
-              <td>Wednesday</td>
-              <td>Thursday</td>
-              <td>Friday</td>
-              <td>Saturday</td>
-              <td>Sunday</td>
-            </tr> -->
             <tr class="stages">
-              <th>Act</th>
-              <td data-field="Acts" class="act"></td>
+              <!-- <th scope="col">Time slots</th>
 
-              <th>Start</th>
-              <td data-field="Start" class="start"></td>
+              <th scope="col" data-field="mon">Monday</th>
+              <th scope="col" data-field="tue">Tuesday</th>
+              <th scope="col" data-field="wed">Wednesday</th>
+              <th scope="col" data-field="thu">Thursday</th>
+              <th scope="col" data-field="fri">Friday</th>
+              <th scope="col" data-field="sat">Saturday</th>
+              <th scope="col" data-field="sun">Sunday</th>-->
 
-              <th>End</th>
-              <td data-field="End" class="end"></td>
-
-              <!-- <td data-field="Midgard" class="midgard"></td>
-              <td data-field="Jotunheim" class="Jotunheim"></td>
-              <td data-field="Vanaheim" class="vanaheim"></td> -->
+              <!-- <th>Act</th> -->
+              <td data-field="Acts" class="act" scope="row"></td>
+              <!-- <th>Start</th> -->
+              <td data-field="Start" class="start" scope="row"></td>
+              <!-- <th>End</th> -->
+              <td data-field="End" class="end" scope="row"></td>
             </tr>
           </table>
         </template>
