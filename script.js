@@ -37,8 +37,6 @@ async function loadSchedule() {
 //==================display the list==================
 function displayList(scheduleList) {
   document.querySelector("#scheduleList").innerHTML = "";
-  // const newArr = Object.entries(scheduleList);
-  // newArr.forEach(displaySchedule);
   for (const stages of Object.entries(scheduleList)) {
     displaySchedule(stages);
   }
