@@ -4,8 +4,13 @@
 window.addEventListener("DOMContentLoaded", init);
 
 //==================all my variables==================
+
 let allStages = [];
 let allDays = [];
+let scheduleList;
+let midgardDisplay = "Midgard";
+let vanaheimDisplay = "Vanaheim";
+let jotunheimDisplay = "Jotunheim";
 
 const settings = {
   filter: "all",
@@ -17,33 +22,55 @@ const scheduleURL = "http://localhost:8080/schedule";
 
 //==================starting off the page==================
 function init() {
+  registerCat();
   loadSchedule();
 }
 
 function registerCat() {
-  document.querySelectorAll("[data-action='filter']").forEach((button) => button.addEventListener("click", selectFilter));
+  // document.querySelectorAll("[data-action='filter']").forEach((button) => button.addEventListener("click", selectFilter));
 }
 
 async function loadSchedule() {
-  // fetch("http://localhost:8080/schedule")
-  //   .then((response) => response.json())
-  //   .then((response) => console.log(response))
-  //   .catch((err) => console.error(err));
-  // displayList();
   const response = await fetch(scheduleURL);
-  const scheduleList = await response.json();
-  displayList(scheduleList);
+  scheduleList = await response.json();
+  // console.log(scheduleList);
+  displayList(scheduleList, midgardDisplay, vanaheimDisplay, jotunheimDisplay);
 }
 //==================display the list==================
-function displayList(scheduleList) {
+function displayList(scheduleList, stageName) {
+  let counter = -1;
   document.querySelector("#scheduleList").innerHTML = "";
   for (const stages of Object.entries(scheduleList)) {
-    displaySchedule(stages);
+    counter++;
+    // console.log(stages);
+    displaySchedule(stages, counter, stageName);
+  }
+  if (stageName === "Midgard") {
+    console.log("midgard here");
+    return midgardDisplay;
+  } else if (stageName === "Vanaheim") {
+    console.log("vana here");
+    return vanaheimDisplay;
+  } else if (stageName === "Jotunheim") {
+    console.log("jo here");
+    return jotunheimDisplay;
   }
 }
 //==================display the stages(?) on the list==================
 
-function displaySchedule(stages) {
+function displaySchedule(stages, counter, stageName) {
+  if (stages[0] !== stageName) {
+    return;
+  }
+  console.log(stages[1].mon);
+  // const allStages = Object.entries(stages[1]);
+  // console.log(allStages);
+  const stageArr = [stages];
+  // console.log(stageArr);
+  // allStages.forEach((stage1) => {
+  //   console.log(stage1);
+  // });
+
   const mon = stages[1].mon;
   const tue = stages[1].tue;
   const wed = stages[1].wed;
@@ -52,6 +79,8 @@ function displaySchedule(stages) {
   const sat = stages[1].sat;
   const sun = stages[1].sun;
 
+  // const stageArr = [mon, tue, wed, thu, fri, sat, sun];
+  // console.log(stageArr);
   // const Midgard = stages[1].Midgard;
 
   // Midgard.forEach((act) => {
@@ -149,6 +178,21 @@ function displaySchedule(stages) {
 // function selectFilter(event) {
 //   settings.filterValue = event.target.dataset.filter;
 //   settings.filterType = event.target.dataset.type;
-
 //   console.log(settings.filterValue);
+//   setFilter(event);
+//   settings.displayedArray = setFilter(event);
+//   displayList();
+// }
+// function setFilter(stageName, event) {
+//   if (stageName === "Midgard") {
+//     console.log("midgard here");
+//     return midgardDisplay;
+//   } else if (stageName === "Vanaheim") {
+//     console.log("vana here");
+//     return vanaheimDisplay;
+//   } else if (stageName === "Jotunheim") {
+//     console.log("jo here");
+//     return jotunheimDisplay;
+//   }
+//   // console.log(stageName);
 // }
