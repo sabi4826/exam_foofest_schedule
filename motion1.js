@@ -11,7 +11,7 @@ inView(".highlight h2", (info) => {
   const controls = animate(info.target, { opacity: [0, 1] }, { duration: 2 }, { repeat: 0 });
 });
 
-//animate articles
+//animate article
 inView(".article", (info) => {
   const controls = animate(info.target, { opacity: [0, 1] }, { duration: 2 });
 });

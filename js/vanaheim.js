@@ -5,38 +5,23 @@ window.addEventListener("DOMContentLoaded", init);
 
 //==================all my variables==================
 
-let allStages = [];
-let allDays = [];
 let scheduleList;
-let midgardDisplay = "Midgard";
 let vanaheimDisplay = "Vanaheim";
-let jotunheimDisplay = "Jotunheim";
 
-const settings = {
-  filter: "all",
-  sortDir: "asc",
-  displayedArray: [],
-  filterValue: "",
-};
 const scheduleURL = "http://localhost:8080/schedule";
 
 //==================starting off the page==================
 function init() {
-  registerCat();
   loadSchedule();
 }
-
-function registerCat() {
-  // document.querySelectorAll("[data-action='filter']").forEach((button) => button.addEventListener("click", selectFilter));
-}
-
+//==================loading the schedule data==================
 async function loadSchedule() {
   const response = await fetch(scheduleURL);
   scheduleList = await response.json();
   // console.log(scheduleList);
   displayList(scheduleList, vanaheimDisplay);
 }
-//==================display the list==================
+//==================display  the artist list on a table==================
 function displayList(scheduleList, stageName) {
   // console.log(stageName);
   let counter = -1;
@@ -47,7 +32,7 @@ function displayList(scheduleList, stageName) {
     displaySchedule(stages, counter, stageName);
   }
 }
-//==================display the stages(?) on the list==================
+//==================display the days on the schedule list==================
 
 function displaySchedule(stages, counter, stageName) {
   if (stages[0] !== stageName) {
