@@ -15,7 +15,7 @@
   <body>
     <main>
       <div class="navigation">
-        <a href="index.html"> <h2 class="logoText">FooFest</h2></a>
+        <h2 class="logoText">FooFest</h2>
         <nav>
           <!-- <ul> -->
           <li>
@@ -40,34 +40,31 @@
           <a href="jotunheim.html"> <p data-filter="Jotunheim" data-action="filter" data-type="jotunheim" class="filteringButtons">Jotunheim</p></a>
         </div>
         <div class="container">
-          <h3 class="stageName">Midgard</h3>
-          <div class="tableContainer">
-            <table class="scheduleListTable">
-              <tr class="heading">
-                <td class="th">Start</td>
-                <td class="th">End</td>
-                <td class="th">Mon</td>
-                <td class="th">Tue</td>
-                <td class="th">Wed</td>
-                <td class="th">Thu</td>
-                <td class="th">Fri</td>
-                <td class="th">Sat</td>
-                <td class="th">Sun</td>
-              </tr>
-            </table>
-
-            <section id="scheduleList"></section>
-          </div>
+          <h3 class="stageName">Jotunheim</h3>
+          <table class="scheduleListTable">
+            <tr>
+              <td class="th">Start</td>
+              <td class="th">End</td>
+              <td class="th">Mon</td>
+              <td class="th">Tue</td>
+              <td class="th">Wed</td>
+              <td class="th">Thu</td>
+              <td class="th">Fri</td>
+              <td class="th">Sat</td>
+              <td class="th">Sun</td>
+            </tr>
+          </table>
+          <section id="scheduleList"></section>
         </div>
+
         <table class="scheduleListTable">
           <template id="scheduleTemplate">
             <tr class="stages">
               <!-- <th>Start</th> -->
               <td data-field="monStart" class="start" scope="row"></td>
-
               <!-- <th>End</th> -->
               <td data-field="monEnd" class="end" scope="row"></td>
-
+              <!-- <th>Act</th> -->
               <td data-field="monActs" class="monact"></td>
               <td data-field="tueActs" class="act"></td>
               <td data-field="wedActs" class="act"></td>
@@ -122,12 +119,6 @@
       </div>
     </footer>
 
-<<<<<<< HEAD
-    <script src="https://kit.fontawesome.com/dc3090b3ac.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="vanaheim.js"></script>
-=======
-    <script src="/js/script.js"></script>
->>>>>>> nancy-branch
+    <script src="/js/jotunheim.js"></script>
   </body>
 </html>

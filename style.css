@@ -42,6 +42,9 @@ p {
   font-family: var(--secondary-font);
   color: white;
 }
+a {
+  text-decoration: none;
+}
 /*********************everything navigation styling goes in here**********************/
 img {
   max-width: 100%;
@@ -66,7 +69,7 @@ nav li {
 }
 .logoText {
   margin: 0;
-  text-shadow: 2px 2px white;
+  text-shadow: 2px 2px #e62323;
   letter-spacing: 0.2rem;
 }
 nav li a {
@@ -119,7 +122,7 @@ nav li a {
   .logoText {
     margin-top: 1rem;
     font-size: 2.5rem;
-    text-shadow: 2px 2px white;
+    /* text-shadow: 2px 2px white; */
     letter-spacing: 0.2rem;
   }
 }
@@ -162,12 +165,15 @@ nav li a {
 }
 
 /*********************everything schedule styling goes in here*********************/
+.stageName {
+  text-shadow: 2px 2px rgb(8, 8, 8);
+}
 .filteringButtons {
   padding: 1rem;
   border-radius: 10px;
   border: none;
   text-transform: uppercase;
-  box-shadow: 1px 1px 5px;
+  box-shadow: 1px 1px 5px black;
   background-color: var(--pink-fontcolor);
   font-size: 1rem;
   color: white;
@@ -196,29 +202,40 @@ nav li a {
   padding: 3rem;
 } */
 .schedule_h1 {
+  font-family: var(--primary-font);
   text-align: center;
   color: white;
 }
-#scheduleList {
-  /* margin: 2rem; */
-  /* border: 1px solid black; */
-  /* padding: 1rem; */
-  padding-top: 0;
-  margin-top: 0;
-}
+/* #scheduleList {
+  display: flex;
+  flex-direction: row;
+} */
 .container {
   margin: 2rem;
   padding: 1rem;
+  margin-top: 0;
+  padding-top: 0;
 }
+/* .tableContainer {
+  display: grid;
+  grid-template-columns: 30% 70%;
+} */
 .scheduleListTable {
   border-collapse: separate;
   width: 100%;
 }
-
+.days_container {
+  display: flex;
+  flex-direction: row;
+}
+/* .heading {
+  display: flex;
+  flex-direction: column;
+} */
 td {
   /* border: 1px solid #dddddd; */
-  text-align: left;
-  padding: 10px;
+  text-align: center;
+  padding: 15px;
   width: 10%;
   box-shadow: 1px 1px 10px rgb(255, 71, 195);
 }
@@ -242,7 +259,7 @@ td {
 }
 .footer_headlines > h2 {
   letter-spacing: 0.2rem;
-  text-shadow: 2px 2px white;
+  text-shadow: 2px 2px #e62323;
 }
 .footer_text {
   font-size: 1.414rem;
