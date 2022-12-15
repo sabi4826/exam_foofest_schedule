@@ -63,13 +63,6 @@ function displaySchedule(stages, counter, stageName) {
     return;
   }
   console.log(stages[1].mon);
-  // const allStages = Object.entries(stages[1]);
-  // console.log(allStages);
-  const stageArr = [stages];
-  // console.log(stageArr);
-  // allStages.forEach((stage1) => {
-  //   console.log(stage1);
-  // });
 
   const mon = stages[1].mon;
   const tue = stages[1].tue;
@@ -79,28 +72,11 @@ function displaySchedule(stages, counter, stageName) {
   const sat = stages[1].sat;
   const sun = stages[1].sun;
 
-  // const stageArr = [mon, tue, wed, thu, fri, sat, sun];
-  // console.log(stageArr);
-  // const Midgard = stages[1].Midgard;
-
-  // Midgard.forEach((act) => {
-  //   const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
-
-  //   clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
-  //   clone.querySelector('[data-field="Start"]').textContent = act.start;
-  //   clone.querySelector('[data-field="End"]').textContent = act.end;
-
-  //   const parent = document.querySelector("#scheduleList");
-
-  //   parent.appendChild(clone);
-  // });
-
   mon.forEach((act) => {
     const clone = document.querySelector("template#scheduleTemplate").content.cloneNode(true);
-
-    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
     clone.querySelector('[data-field="Start"]').textContent = act.start;
     clone.querySelector('[data-field="End"]').textContent = act.end;
+    clone.querySelector('[data-field="Acts"]').textContent = `${act.act}`;
 
     const parent = document.querySelector("#scheduleList");
 

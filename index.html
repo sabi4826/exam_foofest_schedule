@@ -40,13 +40,30 @@
           <p data-filter="Vanaheim" data-action="filter" data-type="vanaheim" class="filteringButtons">Vanaheim</p>
           <p data-filter="Jotunheim" data-action="filter" data-type="jotunheim" class="filteringButtons">Jotunheim</p>
         </div>
-
-        <section id="scheduleList"></section>
-
-        <template id="scheduleTemplate">
+        <div class="container">
+          <h3>Midgard</h3>
           <table class="scheduleListTable">
-            <tr class="stages">
-              <!-- <th scope="col">Time slots</th>
+            <tr>
+              <td class="th">Start</td>
+              <td class="th">End</td>
+              <td class="th">Act</td>
+            </tr>
+          </table>
+          <section id="scheduleList"></section>
+        </div>
+        <div>
+          <h3>Vanaheim</h3>
+          <table class="scheduleListTable">
+            <tr>
+              <td class="th">Start</td>
+              <td class="th">End</td>
+              <td class="th">Act</td>
+            </tr>
+          </table>
+          <section id="vanaheimList"></section>
+        </div>
+        <table class="scheduleListTable">
+          <!-- <th scope="col">Time slots</th>
 
               <th scope="col" data-field="mon">Monday</th>
               <th scope="col" data-field="tue">Tuesday</th>
@@ -55,16 +72,17 @@
               <th scope="col" data-field="fri">Friday</th>
               <th scope="col" data-field="sat">Saturday</th>
               <th scope="col" data-field="sun">Sunday</th>-->
-
-              <!-- <th>Act</th> -->
-              <td data-field="Acts" class="act" scope="row"></td>
+          <template id="scheduleTemplate">
+            <tr class="stages">
               <!-- <th>Start</th> -->
               <td data-field="Start" class="start" scope="row"></td>
               <!-- <th>End</th> -->
               <td data-field="End" class="end" scope="row"></td>
+              <!-- <th>Act</th> -->
+              <td data-field="Acts" class="act" scope="row"></td>
             </tr>
-          </table>
-        </template>
+          </template>
+        </table>
       </section>
     </main>
 
@@ -112,5 +130,6 @@
     <script src="https://kit.fontawesome.com/dc3090b3ac.js" crossorigin="anonymous"></script>
     <script type="module" src="motion1.js"></script>
     <script src="script.js"></script>
+    <script src="vanaheim.js"></script>
   </body>
 </html>
