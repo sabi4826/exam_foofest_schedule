@@ -1,6 +1,6 @@
 "use strict";
 
-import { inView, animate, scroll, stagger } from "https://cdn.skypack.dev/motion";
+import { inView, animate, scroll } from "https://cdn.skypack.dev/motion";
 
 /* scrolling animations */
 //PROGRESS BAR
