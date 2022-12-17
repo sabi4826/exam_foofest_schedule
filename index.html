@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="scheduleSection.css" />
     <title>Foofest Schedule</title>
   </head>
   <body>
@@ -41,20 +42,21 @@
           <a href="jotunheim.html"> <p data-filter="Jotunheim" data-action="filter" data-type="jotunheim" class="filteringButtons">Jotunheim</p></a>
         </div>
 
+        <h3 class="stageName">Midgard</h3>
+
         <div class="container">
-          <h3 class="stageName">Midgard</h3>
           <div class="tableContainer">
             <table class="scheduleListTable">
               <tr class="heading">
                 <td class="th">Start</td>
                 <td class="th">End</td>
-                <td class="th">Mon</td>
-                <td class="th">Tue</td>
-                <td class="th">Wed</td>
-                <td class="th">Thu</td>
-                <td class="th">Fri</td>
-                <td class="th">Sat</td>
-                <td class="th">Sun</td>
+                <td class="th">Monday</td>
+                <td class="th">Tuesday</td>
+                <td class="th">Wednesday</td>
+                <td class="th">Thursday</td>
+                <td class="th">Friday</td>
+                <td class="th">Saturday</td>
+                <td class="th">Sunday</td>
               </tr>
             </table>
 
@@ -70,7 +72,7 @@
               <!-- <th>End</th> -->
               <td data-field="monEnd" class="end" scope="row"></td>
 
-              <td data-field="monActs" class="monact"></td>
+              <td data-field="monActs" class="act"></td>
               <td data-field="tueActs" class="act"></td>
               <td data-field="wedActs" class="act"></td>
               <td data-field="thuActs" class="act"></td>
