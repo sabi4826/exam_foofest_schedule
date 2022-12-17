@@ -47,7 +47,7 @@ function displaySchedule(stages, counter, stageName) {
   const fri = stages[1].fri;
   const sat = stages[1].sat;
   const sun = stages[1].sun;
-  console.log(stages);
+  // console.log(stages);
   const days = [mon, tue, wed, thu, fri, sat, sun];
 
   const myDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
