@@ -49,7 +49,7 @@
 }
 
 .container {
-  display: flex;
+  /* display: flex; */
   padding: 2rem;
 }
 

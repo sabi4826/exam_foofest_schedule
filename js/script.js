@@ -29,7 +29,7 @@ function displayList(scheduleList, stageName) {
   // object.entries (returns an array of a given objects own enumerable string-keyed property key-value pairs)
   for (const stages of Object.entries(scheduleList)) {
     counter++;
-    console.log(stages);
+    // console.log(stages);
     displaySchedule(stages, counter, stageName);
   }
 }
