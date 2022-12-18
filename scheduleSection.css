@@ -70,8 +70,10 @@ td {
   padding: 15px;
   width: 10%;
   box-shadow: 1px 1px 10px rgb(255, 71, 195);
+  font-family: "Poppins", sans-serif;
 }
 .th {
   text-align: center;
-  font-weight: bolder;
+  font-weight: 500;
+  font-size: 1.414rem;
 }
