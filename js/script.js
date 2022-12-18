@@ -24,11 +24,9 @@ async function loadSchedule() {
 //==================display the artist list on a table==================
 function displayList(scheduleList, stageName) {
   // console.log(stageName);
-  // let counter = -1;
   document.querySelector("#scheduleList").innerHTML = "";
   // object.entries (returns an array of a given objects own enumerable string-keyed property key-value pairs)
   for (const stages of Object.entries(scheduleList)) {
-    // counter++;
     // console.log(stages);
     displaySchedule(stages, stageName);
   }
