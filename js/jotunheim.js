@@ -24,19 +24,19 @@ async function loadSchedule() {
 //==================display the artist list on a table==================
 function displayList(scheduleList, stageName) {
   // console.log(stageName);
-  let counter = -1;
+  // let counter = -1;
   document.querySelector("#scheduleList").innerHTML = "";
   // object.entries (returns an array of a given objects own enumerable string-keyed property key-value pairs)
 
   for (const stages of Object.entries(scheduleList)) {
-    counter++;
+    // counter++;
     // console.log(stages);
-    displaySchedule(stages, counter, stageName);
+    displaySchedule(stages, stageName);
   }
 }
 //==================display the days on the schedule list==================
 
-function displaySchedule(stages, counter, stageName) {
+function displaySchedule(stages, stageName) {
   if (stages[0] !== stageName) {
     return;
   }
