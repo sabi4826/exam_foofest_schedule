@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", init);
 let scheduleList;
 let vanaheimDisplay = "Vanaheim";
 
-const scheduleURL = "http://localhost:8080/schedule";
+const scheduleURL = "https://exam2022-reaction.fly.dev/schedule";
 
 //==================starting off the page==================
 function init() {
