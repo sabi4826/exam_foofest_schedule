@@ -19,10 +19,10 @@
 }
 @keyframes color-change {
   from {
-    background-color: #6cc1f6ff;
+    background-color: rgb(112, 215, 255);
   }
   to {
-    background-color: #f6a3e4ff;
+    background-color: rgb(255, 71, 195);
   }
 }
 
@@ -56,8 +56,7 @@
 }
 
 .container {
-  /* display: flex; */
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .scheduleListTable {
@@ -68,10 +67,6 @@
   display: flex;
   flex-direction: row;
 }
-/* .heading {
-  display: flex;
-  flex-direction: column;
-} */
 td {
   text-align: center;
   padding: 15px;
