@@ -60,37 +60,39 @@ img {
   width: 100%;
   padding: 2rem;
   box-shadow: 2px 2px 10px #6cc1f6;
+  z-index: 9999;
 }
 nav li {
   list-style: none;
   display: inline;
-  color: white;
+  color: black;
   text-transform: uppercase;
 }
 .logoText {
   margin: 0;
-  text-shadow: 2px 2px #e62323;
-  letter-spacing: 0.2rem;
+  text-shadow: 2px 2px #b523e6;
+  /* letter-spacing: 0.2rem; */
 }
 nav li a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: var(--dark-text-color);
   padding: 14px 16px;
   /* text-shadow: 1px 1px #e4dfdf; */
   font-family: var(--secondary-font);
 }
-/* BUY ticket Button */
+
 .buyTicketButton {
   background-color: var(--pink-fontcolor);
   border: 0;
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 1px 1px 10px black;
-  font-size: 1rem;
+  font-size: 1.414rem;
   font-family: var(--secondary-font);
   margin-left: 4rem;
-  color: white;
-  font-weight: 600;
+  color: black;
+  /* text-shadow: 1px 1px #444042; */
+  /* font-weight: 600; */
   cursor: pointer;
 }
 
@@ -110,9 +112,10 @@ nav li a {
   }
   nav li {
     margin-top: 1rem;
+    padding: 1rem;
   }
   nav li a {
-    font-size: 15px;
+    font-size: 1rem;
   }
   .buy-ticket-button {
     font-size: 1rem;
@@ -121,8 +124,7 @@ nav li a {
 
   .logoText {
     margin-top: 1rem;
-    font-size: 2.5rem;
-    /* text-shadow: 2px 2px white; */
+    font-size: 3rem;
     letter-spacing: 0.2rem;
   }
 }
@@ -138,11 +140,10 @@ nav li a {
   .navigation ul {
     display: flex;
     flex-direction: column;
-    text-align: right;
+    text-align: end;
   }
   .buyTicketButton {
-    /* display: none; */
-    margin-top: 1rem;
+    display: none;
   }
   .logoText {
     margin-top: 1rem;
@@ -153,14 +154,14 @@ nav li a {
 }
 @media screen and (min-width: 800px) {
   nav li a {
-    font-size: 20px;
+    padding: 1rem;
   }
   .buyTicketButton {
     font-size: 1.2rem;
     margin-left: 2rem;
   }
   .logoText {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 /* motion one  */
@@ -184,13 +185,15 @@ nav li a {
 }
 .headline_text {
   font-size: 1.999rem;
+  color: black;
 }
 .footer_headlines > h2 {
   letter-spacing: 0.2rem;
-  text-shadow: 2px 2px #e62323;
+  text-shadow: 2px 2px white;
 }
 .footer_text {
   font-size: 1.414rem;
+  color: black;
 }
 .contact,
 .email,
