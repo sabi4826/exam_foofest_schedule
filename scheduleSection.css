@@ -12,14 +12,6 @@
   font-size: 1.414rem;
   cursor: pointer;
 }
-.buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  gap: 1rem;
-  align-items: center;
-}
 .filteringButtons:hover {
   transform: rotate(180deg);
   animation-name: color-change;
@@ -33,7 +25,14 @@
     background-color: rgb(255, 71, 195);
   }
 }
-
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  align-items: center;
+}
 @media screen and (min-width: 750px) {
   .buttons {
     display: flex;
