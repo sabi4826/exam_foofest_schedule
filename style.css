@@ -71,17 +71,14 @@ nav li {
 .logoText {
   margin: 0;
   text-shadow: 2px 2px #b523e6;
-  /* letter-spacing: 0.2rem; */
 }
 nav li a {
-  /* text-decoration: none; */
   color: var(--dark-text-color);
   padding: 14px 16px;
-  /* text-shadow: 1px 1px #e4dfdf; */
   font-family: var(--secondary-font);
 }
 
-.buyTicketButton {
+/* .buyTicketButton {
   background-color: var(--pink-fontcolor);
   border: 0;
   border-radius: 10px;
@@ -91,10 +88,8 @@ nav li a {
   font-family: var(--secondary-font);
   margin-left: 4rem;
   color: black;
-  /* text-shadow: 1px 1px #444042; */
-  /* font-weight: 600; */
   cursor: pointer;
-}
+} */
 
 @media screen and (min-width: 601px) {
   .navigation {
@@ -109,6 +104,7 @@ nav li a {
   }
   nav ul {
     padding: 0;
+    display: flex;
   }
   nav li {
     margin-top: 1rem;
@@ -117,10 +113,9 @@ nav li a {
   nav li a {
     font-size: 1rem;
   }
-  .buy-ticket-button {
-    font-size: 1rem;
-    margin-left: 0px;
-  }
+  /* .buy-ticket-button {
+    display: none;
+  } */
 
   .logoText {
     margin-top: 1rem;
@@ -142,9 +137,9 @@ nav li a {
     flex-direction: column;
     text-align: end;
   }
-  .buyTicketButton {
+  /* .buyTicketButton {
     display: none;
-  }
+  } */
   .logoText {
     margin-top: 1rem;
     font-size: 1.8rem;
@@ -156,10 +151,9 @@ nav li a {
   nav li a {
     padding: 1rem;
   }
-  .buyTicketButton {
-    font-size: 1.2rem;
-    margin-left: 2rem;
-  }
+  /* .buyTicketButton {
+    display: none;
+  } */
   .logoText {
     font-size: 3rem;
   }
