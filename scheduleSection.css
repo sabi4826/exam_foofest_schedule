@@ -47,7 +47,11 @@
   display: flex;
   flex-direction: column;
   background-image: url(assets/bg2.webp);
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .schedule_h1 {
